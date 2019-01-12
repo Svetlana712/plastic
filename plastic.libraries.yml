@@ -1,0 +1,15 @@
+framework:
+  css:
+    theme:
+      css/style.css: {}
+      css/animate.css: {}
+      css/font-awesome.css: {}
+      responsiveslides/responsiveslides.css: {}
+
+
+global-scripts:
+      version: VERSION
+      js:
+        js/wow.min.js: {}
+        js/plastic.js: {}
+        responsiveslides/responsiveslides.min.js: {}

@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the Plastic theme.
+
+plastic.settings:
+  type: theme_settings
+  label: 'Plastic settings'

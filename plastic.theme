@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+/*Add a node ID as class*/
+function plastic_preprocess_html(&$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
+  }
+}
+/*
+function plastic_breadcrumb($breadcrumb) {
+  if (strip_tags($breadcrumb[0]) == "Home") {
+    $breadcrumb = preg_replace("Home", "Dr. Tkachenko_K", $breadcrumb); // This line will search and replace text.
+    return '<div class="breadcrumb">'. implode(' / ', $breadcrumb) . '</div>';
+  }
+}*/
