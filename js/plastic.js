@@ -43,9 +43,22 @@
                   });
 
                   //$('.dropdown-toggle').prop('disabled', true);
+                  function setMobileMenuHeight() {
+                      var wh = $(window).height(),
+                          hh = $('.navbar-header').outerHeight(),
+                          $am = $('#toolbar-bar'),
+                          ah = $am.length ? $am.outerHeight() : 0;
+                      $('.region-navigation-collapsible').css('max-height', wh - hh - ah + 'px');
+
+                  }
+                  $('.navbar-toggle').on('click', setMobileMenuHeight);
+                  $(window).on('resize', function (event) {
+                      setMobileMenuHeight();
+                  });
 
                   $('.dropdown-toggle').on('click', function(e) {
                       if ( $('.navbar-toggle').css('display') !== 'none' ) {
+
                           var aria_expanded    = $(this).attr('aria-expanded'),
                               $dm       = $(this).next('.dropdown-menu'),
                               dm_li        = $dm.find('li'),
@@ -55,6 +68,9 @@
                               h += +$(dm_li[i]).outerHeight();
                           }
                           $dm.height( aria_expanded === 'true' ? 0 : h );
+                      }
+                      else{
+                          $(this).prop('disabled', true);
                       }
                   });
 

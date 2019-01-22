@@ -14,10 +14,3 @@ function plastic_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
   }
 }
-/*
-function plastic_breadcrumb($breadcrumb) {
-  if (strip_tags($breadcrumb[0]) == "Home") {
-    $breadcrumb = preg_replace("Home", "Dr. Tkachenko_K", $breadcrumb); // This line will search and replace text.
-    return '<div class="breadcrumb">'. implode(' / ', $breadcrumb) . '</div>';
-  }
-}*/
