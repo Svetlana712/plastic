@@ -6855,12 +6855,16 @@ header {
       font-size: 40px; }
   .footer section {
     width: auto;
-    float: left; }
-    .footer section:nth-child(2n+1) {
-      padding-right: 10px; }
-    .footer section:nth-child(2n) {
-      padding-left: 10px;
-      float: right; }
+    float: left;
+    padding-right: 10px; }
+    .footer section#block-talisa {
+      float: right;
+      padding-right: 0; }
+
+#block-location .field--name-body {
+  display: table-cell;
+  height: 44px;
+  vertical-align: middle; }
 
 #block-talisa {
   text-align: right; }
@@ -7242,6 +7246,10 @@ ul.rslides_tabs {
   #navbar .navbar-nav > li > a, #navbar .navbar-nav > li > a:visited {
     font-size: 20px;
     padding: 8px; } }
+@media (max-width: 799px) {
+  #block-location {
+    width: 200px;
+    line-height: 1.4; } }
 @media (max-width: 767px) {
   .lock-scroll {
     overflow: hidden; }
@@ -7354,14 +7362,13 @@ ul.rslides_tabs {
     width: 30px;
     height: 30px;
     padding: 0; } }
-@media (max-width: 567px) {
-  .page-node-type-article .field--name-field-image {
-    max-width: 100%;
-    width: 100%;
-    float: none;
-    margin: 0 0 20px 0; }
+@media (max-width: 639px) {
+  #block-location .field--name-body {
+    display: block;
+    height: auto; }
 
-  #block-social-2 {
+  #block-social-2,
+  #block-location {
     width: 100%;
     text-align: center;
     padding: 0 0 10px 0; }
@@ -7371,6 +7378,12 @@ ul.rslides_tabs {
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #ffffff; } }
+@media (max-width: 567px) {
+  .page-node-type-article .field--name-field-image {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    margin: 0 0 20px 0; } }
 @media (max-width: 479px) {
   .view-otziv .view-footer {
     text-align: center; }
